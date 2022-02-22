@@ -7,6 +7,7 @@ import Lanzamientos from "./components/Lanzamientos";
 import Populares from "./components/Populares";
 import Busqueda from "./components/Busqueda";
 import DetallePelicula from "./components/DetallePelicula";
+import ErrorNoEncontrado from "./components/ErrorNoEncontrado";
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/populares" element={<Populares/>}/>
         <Route path="/busqueda" element={<Busqueda/>}/>
         <Route path="/peliculas:idPelicula" element={<DetallePelicula/>}/>
+        <Route path="*" element={<ErrorNoEncontrado/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>
