@@ -6,9 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const NavBar = () => {
     return (
-        <div>
             <Navbar bg="dark" variant="dark">
-                <Container>
                     <Navbar.Brand href="/">
                         <img
                             alt=""
@@ -25,10 +23,7 @@ const NavBar = () => {
                         <Nav.Link href="populares">Populares</Nav.Link>
                         <Nav.Link href="busqueda">Búsqueda</Nav.Link>
                     </Nav>
-                </Container>
             </Navbar>
-
-        </div>
     )
 }
 

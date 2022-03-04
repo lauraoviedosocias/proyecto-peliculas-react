@@ -2,18 +2,16 @@ import { Card, Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const Tarjeta = () => {
+const Tarjeta = ({titulo, imagen}) => {
+
+    
     return (
 
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="http://placekitten.com/100" />
+        <Card style={{ width: '18rem', height: '35rem', margin: '5px' }}>
+            <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w500/${imagen}`} />
             <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Card.Title>{titulo}</Card.Title>
+                <Button variant="primary">Más info</Button>
             </Card.Body>
         </Card>
     )
