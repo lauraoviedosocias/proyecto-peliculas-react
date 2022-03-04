@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
-import NavBar from "./components/Nav"
+import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
 import Home from "./components/Home";
 import Lanzamientos from "./components/Lanzamientos";
@@ -17,7 +17,7 @@ const App = () => {
       <NavBar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/lanzamientos" element={<Lanzamientos/>}/>
+        <Route path="lanzamientos" element={<Lanzamientos/>}/>
         <Route path="/populares" element={<Populares/>}/>
         <Route path="/busqueda" element={<Busqueda/>}/>
         <Route path="/peliculas:idPelicula" element={<DetallePelicula/>}/>
