@@ -7,7 +7,7 @@ const Lanzamientos = () => {
     const [ultimosLanzamientos, setUltimosLanzamientos] = useState([])
 
     useEffect(()=> {
-        fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=en-US&page=1`)
+        fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es-AR&page=1`)
             .then((res)=> res.json())
             .then((data)=> {
                 setUltimosLanzamientos(data.results)
@@ -17,22 +17,16 @@ const Lanzamientos = () => {
 
     return (
         <Container fluid>
-            <h1 class="p-3">Soy la sección Lanzamientos</h1>
+            <h2 className="p-3">Conocé cuáles son los estrenos más recientes</h2>
             <Row>
                 {ultimosLanzamientos.map((elemento)=>(
                     <Col><Tarjeta
                         imagen={elemento.poster_path}
-                        titulo={elemento.title}
-                        masInfo={elemento.overview} /></Col>
+                        titulo={elemento.title}/></Col>
                     ))}
                 
             </Row>
-        </Container>
-
-
-            
-            
-        
+        </Container> 
     )
 }
 

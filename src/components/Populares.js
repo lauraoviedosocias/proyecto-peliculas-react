@@ -1,21 +1,32 @@
-import { Card, Button } from "react-bootstrap";
+import Tarjeta from "./Tarjeta";
+import { useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 
 const Populares = () => {
+
+    const [populares, setPopulares] = useState([])
+
+    useEffect(()=> {
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es-AR&page=1`)
+            .then((res) => res.json())
+            .then((data) => {
+                setPopulares(data.results)
+            })
+    }, [])
+
+
     return (
-        <div>
-            <h1>Soy la sección Populares</h1>
-            {/* <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="http://placekitten.com/100" />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-            </Card> */}
-        </div>
+        <Container fluid>
+            <h2 className="p-3">Conocé cuáles son las películas más populares</h2>
+            <Row>
+                {populares.map((elemento)=>(
+                    <Col><Tarjeta
+                        imagen={elemento.poster_path}
+                        titulo={elemento.title}/></Col>
+                    ))}
+                
+            </Row>
+        </Container>
     )
 }
 
