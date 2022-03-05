@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import Tarjeta from "./Tarjeta";
 import { Col, Row } from "react-bootstrap";
 
@@ -9,21 +10,26 @@ import { Col, Row } from "react-bootstrap";
 const Busqueda = () => {
     
     const [busqueda, setBusqueda] = useState([])
-    const [valorDelInput, setValorDelInput] = useState("")
-    const [valorBusqueda, setValorBusqueda] = useState("marvel")
+    const [valorBusqueda, setValorBusqueda] = useState("")
+    const [searchParams, setSearchParams] = useSearchParams({
+        query: ""
+    })
 
     const handleChange = (e) => {
-        setValorDelInput(e.target.value)
+        setSearchParams({
+            query: e.target.value
+        })
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        setValorBusqueda(valorDelInput)
-        console.log(valorBusqueda)
-    }
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     setValorBusqueda(searchParams.query)
+    // }
 
     const handleClick = () => {
-        setValorBusqueda(valorDelInput)
+        setValorBusqueda(searchParams.get("query"))
+        console.log(searchParams.get("query"))
+        console.log(valorBusqueda)
     }
 
     useEffect(()=>{
@@ -39,10 +45,13 @@ const Busqueda = () => {
     return (
         <div>
             <h2 className="p-3">Acá podés buscar tu peli favorita</h2>
-            <form className="form-group w-25" onSubmit={handleSubmit}>
+            <form className="form-group w-25">
             <div className="input-group mb-3 p-3">
-                <input type="text" className="form-control" placeholder="Nombre de la película" aria-label="Nombre de la película" aria-describedby="button-addon2" onChange={handleChange}/>
-                    <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={handleClick}>Buscar</button>
+                <input type="text" className="form-control" placeholder="Nombre de la película" aria-label="Nombre de la película" aria-describedby="button-addon2" 
+                onChange={handleChange}
+                value={searchParams.get("query")} 
+                />
+                <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={handleClick}>Buscar</button>
             </div>
             </form>
             <Row>
