@@ -1,6 +1,7 @@
-import Tarjeta from "./Tarjeta";
+import Tarjeta from "./Tarjeta"
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Lanzamientos = () => {
 
@@ -20,9 +21,14 @@ const Lanzamientos = () => {
             <h2 className="p-3">Conocé cuáles son los estrenos más recientes</h2>
             <Row>
                 {ultimosLanzamientos.map((elemento)=>(
-                    <Col><Tarjeta
-                        imagen={elemento.poster_path}
-                        titulo={elemento.title}/></Col>
+                    <Col>
+                        <Link to={`/peliculas/${elemento.id}`}>
+                            <Tarjeta
+                                key={elemento.id}
+                                imagen={elemento.poster_path}
+                                titulo={elemento.title} />
+                        </Link>
+                    </Col>
                     ))}
                 
             </Row>

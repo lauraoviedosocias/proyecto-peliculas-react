@@ -6,7 +6,6 @@ const Tarjeta = ({titulo, imagen}) => {
 
     
     return (
-
         <Card className="d-flex flex-column justify-content-around" style={{ width: '18rem', height: '35rem', margin: '5px' }}>
             <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w500/${imagen}`} />
             <Card.Body className="d-flex flex-column justify-content-around">
@@ -14,6 +13,7 @@ const Tarjeta = ({titulo, imagen}) => {
                 <Button variant="btn btn-outline-secondary btn-sm">Más info<span><i className="bi bi-chevron-double-right"></i></span></Button>
             </Card.Body>
         </Card>
+        
     )
 }
 

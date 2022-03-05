@@ -21,6 +21,7 @@ const Populares = () => {
             <Row>
                 {populares.map((elemento)=>(
                     <Col><Tarjeta
+                        key={elemento.id}
                         imagen={elemento.poster_path}
                         titulo={elemento.title}/></Col>
                     ))}
