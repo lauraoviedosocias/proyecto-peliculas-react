@@ -10,7 +10,7 @@ import { Col, Row } from "react-bootstrap";
 const Busqueda = () => {
     
     const [busqueda, setBusqueda] = useState([])
-    const [valorBusqueda, setValorBusqueda] = useState("")
+    const [valorBusqueda, setValorBusqueda] = useState("undefined")
     const [searchParams, setSearchParams] = useSearchParams({
         query: ""
     })
@@ -49,7 +49,7 @@ const Busqueda = () => {
             <div className="input-group mb-3 p-3">
                 <input type="text" className="form-control" placeholder="Nombre de la película" aria-label="Nombre de la película" aria-describedby="button-addon2" 
                 onChange={handleChange}
-                value={searchParams.get("query")} 
+                value={searchParams.query} 
                 />
                 <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={handleClick}>Buscar</button>
             </div>
