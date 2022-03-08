@@ -1,0 +1,26 @@
+$color-secundario: #212529;
+
+.titulo-categoria {
+    color: #e9ecef;
+}
+
+
+
+.contenedor-lista {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 500px;
+    height: 800px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.encabezado {
+    background-color: $color-secundario;
+    padding:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
