@@ -1,5 +1,5 @@
 import { Carousel } from "react-bootstrap";
-import "../styles/Carrusel.scss";
+import "../styles/CarruselElemento.scss";
 import { useEffect, useState } from "react";
 
 const CarruselElemento = () => {
@@ -7,7 +7,7 @@ const CarruselElemento = () => {
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/upcoming?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/upcoming?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es-AR&page=1`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -24,7 +24,7 @@ const CarruselElemento = () => {
           <img
             className="d-block w-100"
             src={`https://image.tmdb.org/t/p/original/${elemento.poster_path}`}
-            alt="First slide"
+            alt={elemento.title}
           />
           <Carousel.Caption>
             <h3>{elemento.title}</h3>
