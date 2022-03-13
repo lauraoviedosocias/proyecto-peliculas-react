@@ -18,13 +18,7 @@ const DetallePelicula = () => {
 
     return (
       <div
-        className="contenedor-principal"
-        style=
-          {{backgroundColor: 'white', 
-        //   backgroundImage: 'url(https://place-puppy.com/1200x1200)'}}
-    }}
-        
-      >
+        className="contenedor-principal">
           
         <div className="tarjeta-imagen">
           <img src={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`} />
