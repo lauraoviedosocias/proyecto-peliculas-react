@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Tarjeta from "./Tarjeta";
 import { Col, Row } from "react-bootstrap";
 
@@ -44,27 +45,43 @@ const Busqueda = () => {
 
 
     return (
-        <div>
-            <h2 className="p-3">Acá podés buscar tu peli favorita</h2>
-            <form className="form-group w-25" onSubmit={handleSubmit}>
-            <div className="input-group mb-3 p-3">
-                <input type="text" className="form-control" placeholder="Nombre de la película" aria-label="Nombre de la película" aria-describedby="button-addon2" 
-                onChange={handleChange}
-                 
+      <div>
+        <h2 className="p-3">Acá podés buscar tu peli favorita</h2>
+        <form className="form-group w-25" onSubmit={handleSubmit}>
+          <div className="input-group mb-3 p-3">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Nombre de la película"
+              aria-label="Nombre de la película"
+              aria-describedby="button-addon2"
+              onChange={handleChange}
+              value={searchParams.query}
+            />
+            <button
+              className="btn btn-outline-secondary"
+              type="button"
+              id="button-addon2"
+              onClick={handleClick}
+            >
+              Buscar
+            </button>
+          </div>
+        </form>
+        <Row>
+          {busqueda.map((elemento) => (
+            <Col key={elemento.id}>
+              <Link to={`/peliculas/${elemento.id}`}>
+                <Tarjeta                  
+                  imagen={elemento.poster_path}
+                  titulo={elemento.title}
                 />
-                <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={handleClick}>Buscar</button>
-            </div>
-            </form>
-            <Row>
-            {busqueda.map((elemento)=>(
-                <Col><Tarjeta
-                key={elemento.id}
-                imagen={elemento.poster_path}
-                titulo={elemento.title}/></Col>
-            ))}
-            </Row>
-        </div>
-    )
+              </Link>
+            </Col>
+          ))}
+        </Row>
+      </div>
+    );
 }
 
 export default Busqueda;

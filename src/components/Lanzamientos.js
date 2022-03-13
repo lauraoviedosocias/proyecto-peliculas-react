@@ -12,6 +12,7 @@ const Lanzamientos = () => {
             .then((res)=> res.json())
             .then((data)=> {
                 setUltimosLanzamientos(data.results)
+                
             })
     }, [])
 
@@ -21,12 +22,12 @@ const Lanzamientos = () => {
             <h2 className="p-3">Conocé cuáles son los estrenos más recientes</h2>
             <Row>
                 {ultimosLanzamientos.map((elemento)=>(
-                    <Col>
+                    <Col key={elemento.id}>
                         <Link to={`/peliculas/${elemento.id}`}>
                             <Tarjeta
-                                key={elemento.id}
                                 imagen={elemento.poster_path}
                                 titulo={elemento.title} />
+                            <p>{elemento.id}</p> 
                         </Link>
                     </Col>
                     ))}

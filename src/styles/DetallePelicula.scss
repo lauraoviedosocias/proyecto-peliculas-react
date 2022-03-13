@@ -1,4 +1,53 @@
+@mixin centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+
+.contenedor-principal {
+    height: 100vh;
+
+    @include centrado;
+
+
+    
+        .tarjeta-imagen {
+            height: 500px;
+            width: 300px;
+             img {
+                 height: 100%;
+                 width: auto;
+             }
+        }
+        
+        .tarjeta-informacion {
+            height: 500px;
+            width: 500px;
+            margin-left: 50px;
+            background-color:  hsla(0, 0%, 0%, 0);
+            border: 3px solid pink;
+    
+
+            .titulo {
+                display: flex;
+                @include centrado;
+                justify-content: space-between;
+            }
+
+            .detalles {
+                padding-top: 30px;
+            }
+
+        }
+    
+}
 
 
 
