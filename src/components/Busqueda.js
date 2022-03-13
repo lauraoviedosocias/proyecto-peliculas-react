@@ -11,10 +11,11 @@ import { Col, Row } from "react-bootstrap";
 const Busqueda = () => {
     
     const [busqueda, setBusqueda] = useState([])
-    const [valorBusqueda, setValorBusqueda] = useState("undefined")
     const [searchParams, setSearchParams] = useSearchParams({
-        query: ""
+        query: "marvel"
     })
+    const [valorBusqueda, setValorBusqueda] = useState("")
+    
 
     const handleChange = (e) => {
         setSearchParams({
@@ -22,10 +23,10 @@ const Busqueda = () => {
         })
     }
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault()
-    //     setValorBusqueda(searchParams.query)
-    // }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setValorBusqueda(searchParams.query)
+    }
 
     const handleClick = () => {
         setValorBusqueda(searchParams.get("query"))
@@ -34,7 +35,7 @@ const Busqueda = () => {
     }
 
     useEffect(()=>{
-        fetch(`https://api.themoviedb.org/3/search/movie?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es-AR&query=${valorBusqueda}&page=1`)
+        fetch(`https://api.themoviedb.org/3/search/movie?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es-AR&query=${searchParams.get("query")}&page=1`)
             .then((res) => res.json())
             .then((data) => {
                 setBusqueda(data.results)
@@ -46,7 +47,7 @@ const Busqueda = () => {
     return (
       <div>
         <h2 className="p-3">Acá podés buscar tu peli favorita</h2>
-        <form className="form-group w-25">
+        <form className="form-group w-25" onSubmit={handleSubmit}>
           <div className="input-group mb-3 p-3">
             <input
               type="text"
