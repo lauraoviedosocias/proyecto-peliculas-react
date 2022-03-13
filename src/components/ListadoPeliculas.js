@@ -22,6 +22,7 @@ const ListadoPeliculas = ({categoria, tituloCategoria}) => {
         <div className="encabezado"><h3 className="titulo-categoria">{tituloCategoria}</h3></div>
         {peliculas.map((elemento) => (
           <TarjetaPeliculaHorizontal
+            key={elemento.id}
             imagen={`https://image.tmdb.org/t/p/w200/${elemento.poster_path}`}
             tituloPelicula={elemento.title}
 

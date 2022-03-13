@@ -20,7 +20,7 @@ const CarruselElemento = () => {
 
       {elementosCarrusel.map((elemento) => (
 
-        <Carousel.Item className="contenedor-carrusel">
+        <Carousel.Item className="contenedor-carrusel" key={elemento.id}>
           <img
             className="d-block w-100"
             src={`https://image.tmdb.org/t/p/original/${elemento.poster_path}`}
