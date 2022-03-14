@@ -1,6 +1,7 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 import "../logo.svg"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import popcorn from "../img/popcorn.png"
 
 
 
@@ -10,8 +11,8 @@ const NavBar = () => {
                     <Navbar.Brand href="/">
                         <img
                             alt=""
-                            src="http://placekitten.com/50"
-                            width="30"
+                            src={popcorn}
+                            width="60"
                             height="60"
                             className="d-inline-block align-top"
                         />{' '}
