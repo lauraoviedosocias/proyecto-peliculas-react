@@ -1,20 +1,24 @@
 import Tarjeta from "./Tarjeta";
 import { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Pagination } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Paginacion from "./Paginacion";
 
 const Populares = () => {
   const [populares, setPopulares] = useState([]);
+  const [paginaActual, setPaginaActual] = useState(1)
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es-AR&page=1`
+      `https://api.themoviedb.org/3/movie/popular?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es-AR&page=${paginaActual}`
     )
       .then((res) => res.json())
       .then((data) => {
         setPopulares(data.results);
       });
   }, []);
+
+
 
   return (
     <Container fluid>
