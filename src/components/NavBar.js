@@ -12,13 +12,13 @@ const NavBar = () => {
                             alt=""
                             src="http://placekitten.com/50"
                             width="30"
-                            height="30"
+                            height="60"
                             className="d-inline-block align-top"
                         />{' '}
-                        Home
                     
                     </Navbar.Brand>
-                    <Nav className="me-auto">
+                    <Nav className="me-auto" style={{ height: '60px' }}>
+                        <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="lanzamientos">Últimos lanzamientos</Nav.Link>
                         <Nav.Link href="populares">Populares</Nav.Link>
                         <Nav.Link href="busqueda">Búsqueda</Nav.Link>
