@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 const DetallePelicula = () => {
   const params = useParams();
   const [pelicula, setPelicula] = useState([]);
+  const [generos, setGeneros] = useState([])
 
   useEffect(() => {
     fetch(
@@ -13,14 +14,29 @@ const DetallePelicula = () => {
       .then((res) => res.json())
       .then((data) => {
         setPelicula(data);
+        setGeneros(data.genres)
       });
   }, []);
 
+
+
   return (
-    <div className="contenedor-principal"
-        style={{ backgroundImage: "url(" + "https://image.tmdb.org/t/p/original/" + pelicula.backdrop_path + ")", opacity: '.95' }}>
+    <div
+      className="contenedor-principal"
+      style={{
+        backgroundImage:
+          "url(" +
+          "https://image.tmdb.org/t/p/original/" +
+          pelicula.backdrop_path +
+          ")",
+        opacity: ".95",
+      }}
+    >
+      <div className="fondo-opaco"></div>
       <div className="tarjeta-imagen">
-        <img src={`https://image.tmdb.org/t/p/original/${pelicula.poster_path}`} />
+        <img
+          src={`https://image.tmdb.org/t/p/original/${pelicula.poster_path}`}
+        />
       </div>
 
       <div className="tarjeta-informacion">
@@ -32,7 +48,11 @@ const DetallePelicula = () => {
           <h4>Resumen</h4>
           <p>{pelicula.overview}</p>
           <h4>Géneros</h4>
-          <li>Acción</li>
+          <ul>
+            {generos.map((genero)=>(
+              <li key={genero.id}>{genero.name}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

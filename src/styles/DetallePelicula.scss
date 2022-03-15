@@ -18,10 +18,12 @@ $color-tipografia-hover: #b2b5b8;
   width: 100vw;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 
   @include centrado;
 
   .tarjeta-imagen {
+      position: relative;
     height: 600px;
     width: 400px;
     img {
@@ -31,11 +33,11 @@ $color-tipografia-hover: #b2b5b8;
   }
 
   .tarjeta-informacion {
+    position: relative;
     height: 600px;
     width: 700px;
     margin-left: 50px;
     background-color: hsla(0, 0%, 0%, 0);
-    border: 3px solid pink;
     color: $color-tipografia;
 
     .titulo {
@@ -49,3 +51,14 @@ $color-tipografia-hover: #b2b5b8;
     }
   }
 }
+
+.fondo-opaco {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    opacity: .6;
+}
+
