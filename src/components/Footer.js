@@ -1,7 +1,9 @@
+import "../styles/Footer.scss"
+
 const Footer = () => {
     return (
-        <div>
-            <h1>Soy el Footer</h1>
+        <div className="contenedor-footer">
+            <h4>Hecho con ❤️ y ⚛️</h4>
         </div>
     )
 }

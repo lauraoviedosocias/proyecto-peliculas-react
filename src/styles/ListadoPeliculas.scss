@@ -1,13 +1,14 @@
 $color-secundario: #212529;
 $color-fondo: #fff;
 $color-tipografia: #e9ecef;
+$color-tipografia-hover: #b2b5b8;
 
 .contenedor-principal-lista {
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 2px solid pink;
+    
 
     margin: 25px;
 
@@ -17,6 +18,7 @@ $color-tipografia: #e9ecef;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 3px solid $color-secundario;
 
     .titulo-categoria {
       color: $color-tipografia;
@@ -30,7 +32,18 @@ $color-tipografia: #e9ecef;
     width: 720px;
     height: 800px;
     padding: 10px;
-    border: 2px solid red;
+    border: 3px solid $color-secundario;
     overflow: scroll;
+
+    a {
+      text-decoration: none;
+      color: $color-secundario;
+      font-size: 20px;
+      &:hover {
+          color: $color-tipografia-hover;
+      }
+      
+    }
   }
 }
+

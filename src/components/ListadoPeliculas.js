@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import TarjetaPeliculaHorizontal from "./TarjetaPeliculaHorizontal";
 import "../styles/ListadoPeliculas.scss";
+import { Link } from "react-router-dom";
 
 const ListadoPeliculas = ({ categoria, tituloCategoria }) => {
   const [peliculas, setPeliculas] = useState([]);
@@ -20,10 +21,12 @@ const ListadoPeliculas = ({ categoria, tituloCategoria }) => {
       </div>
       <div className="contenedor-lista">
         {peliculas.map((elemento) => (
-          <TarjetaPeliculaHorizontal
-            imagen={`https://image.tmdb.org/t/p/w200/${elemento.poster_path}`}
-            tituloPelicula={elemento.title}
-          />
+          <Link key={elemento.id} to={`/peliculas/${elemento.id}`}>
+            <TarjetaPeliculaHorizontal
+              imagen={`https://image.tmdb.org/t/p/w200/${elemento.poster_path}`}
+              tituloPelicula={elemento.title}
+            />
+          </Link>
         ))}
       </div>
     </div>
