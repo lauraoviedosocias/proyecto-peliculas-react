@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import Tarjeta from "./Tarjeta";
 import { Col, Row } from "react-bootstrap";
+import "../styles/Busqueda.scss"
+
 
 const Busqueda = () => {
   const [busqueda, setBusqueda] = useState([]);
@@ -62,13 +64,14 @@ const Busqueda = () => {
       </form>
       <Row>
         {busqueda.map((elemento) => (
-          <Col>
-            <Tarjeta
-              key={elemento.id}
+          <Col key={elemento.id}>
+          <Link to={`/peliculas/${elemento.id}`}>
+            <Tarjeta                  
               imagen={elemento.poster_path}
               titulo={elemento.title}
             />
-          </Col>
+          </Link>
+        </Col>
         ))}
       </Row>
     </div>

@@ -1,0 +1,11 @@
+$color-secundario: #212529;
+$color-tipografia-hover: #b2b5b8;
+
+a {
+    text-decoration: none;
+    color: $color-secundario;
+    font-size: 20px;
+    &:hover {
+      color: $color-tipografia-hover;
+    }
+  }

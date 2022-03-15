@@ -2,6 +2,7 @@ import Tarjeta from "./Tarjeta";
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "../styles/Lanzamientos.scss"
 
 const Lanzamientos = () => {
   const [ultimosLanzamientos, setUltimosLanzamientos] = useState([]);
@@ -21,10 +22,9 @@ const Lanzamientos = () => {
       <h2 className="p-3">Conocé cuáles son los estrenos más recientes</h2>
       <Row>
         {ultimosLanzamientos.map((elemento) => (
-          <Col>
+          <Col key={elemento.id}>
             <Link to={`/peliculas/${elemento.id}`}>
               <Tarjeta
-                key={elemento.id}
                 imagen={elemento.poster_path}
                 titulo={elemento.title}
               />

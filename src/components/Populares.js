@@ -1,6 +1,9 @@
 import Tarjeta from "./Tarjeta";
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "../styles/Populares.scss"
+
 
 const Populares = () => {
   const [populares, setPopulares] = useState([]);
@@ -20,13 +23,11 @@ const Populares = () => {
       <h2 className="p-3">Conocé cuáles son las películas más populares</h2>
       <Row>
         {populares.map((elemento) => (
-          <Col>
-            <Tarjeta
-              key={elemento.id}
-              imagen={elemento.poster_path}
-              titulo={elemento.title}
-            />
-          </Col>
+          <Col key={elemento.id}>
+          <Link to={`/peliculas/${elemento.id}`}>
+            <Tarjeta imagen={elemento.poster_path} titulo={elemento.title} />
+          </Link>
+        </Col>
         ))}
       </Row>
     </Container>
