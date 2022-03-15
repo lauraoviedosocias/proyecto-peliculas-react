@@ -27,6 +27,7 @@ const ListadoPeliculas = ({ categoria, tituloCategoria }) => {
               tituloPelicula={elemento.title}
             />
           </Link>
+
         ))}
       </div>
     </div>

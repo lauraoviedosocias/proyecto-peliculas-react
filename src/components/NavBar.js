@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import "../styles/NavBar.scss";
 
 const NavBar = () => {
+
   return (
     <Navbar bg="dark" variant="dark">
       <Navbar.Brand href="/">
@@ -36,5 +37,7 @@ const NavBar = () => {
     </Navbar>
   );
 };
+
+    
 
 export default NavBar;

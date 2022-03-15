@@ -77,5 +77,6 @@ const Busqueda = () => {
     </div>
   );
 };
+    
 
 export default Busqueda;

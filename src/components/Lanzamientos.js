@@ -6,7 +6,6 @@ import "../styles/Lanzamientos.scss"
 
 const Lanzamientos = () => {
   const [ultimosLanzamientos, setUltimosLanzamientos] = useState([]);
-
   useEffect(() => {
     fetch(
       `https://api.themoviedb.org/3/movie/now_playing?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es-AR&page=1`

@@ -1,6 +1,6 @@
+import "../styles/DetallePelicula.scss"
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
 
 const DetallePelicula = () => {
   const params = useParams();
