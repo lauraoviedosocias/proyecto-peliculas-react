@@ -17,22 +17,24 @@ const CarruselElemento = () => {
 
   return (
     <Carousel fade>
-
       {elementosCarrusel.map((elemento) => (
-
-        <Carousel.Item className="contenedor-carrusel" key={elemento.id}>
-          <img
-            className="d-block w-100"
-            src={`https://image.tmdb.org/t/p/original/${elemento.poster_path}`}
-            alt={elemento.title}
-          />
+        <Carousel.Item
+          className="contenedor-carrusel"
+          style={{
+            backgroundImage:
+              "url(" +
+              "https://image.tmdb.org/t/p/original/" +
+              elemento.backdrop_path +
+              ")",
+          }}
+          alt={elemento.title}
+        >
           <Carousel.Caption>
             <h3>{elemento.title}</h3>
             <p>{elemento.overview}</p>
           </Carousel.Caption>
         </Carousel.Item>
       ))}
-
     </Carousel>
   );
 };

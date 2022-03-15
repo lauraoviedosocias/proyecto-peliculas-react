@@ -1,26 +1,36 @@
 $color-secundario: #212529;
+$color-fondo: #fff;
+$color-tipografia: #e9ecef;
 
-.titulo-categoria {
-    color: #e9ecef;
-}
+.contenedor-principal-lista {
 
-
-
-.contenedor-lista {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
-    width: 500px;
-    height: 800px;
-    padding: 10px;
-    margin: 10px;
-}
+    justify-content: center;
+    border: 2px solid pink;
 
-.encabezado {
+    margin: 25px;
+
+  .encabezado {
     background-color: $color-secundario;
-    padding:10px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 
+    .titulo-categoria {
+      color: $color-tipografia;
+    }
+  }
+
+  .contenedor-lista {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-fondo;
+    width: 720px;
+    height: 800px;
+    padding: 10px;
+    border: 2px solid red;
+    overflow: scroll;
+  }
 }
