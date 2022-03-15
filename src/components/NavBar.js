@@ -14,7 +14,6 @@ const NavBar = () => {
                         <img
                             alt=""
                             src={popcorn}
-                            padding="10px"
                             width="60"
                             height="60"
                             className="d-inline-block align-top"
