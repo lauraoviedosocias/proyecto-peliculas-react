@@ -3,54 +3,52 @@ $color-tipografia-hover: #b2b5b8;
 $color-fondo: #fff;
 
 @mixin centrado {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.contenedor-principal-lista {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: $color-fondo;
-    border: solid 1px $color-tipografia-hover;    
+.contenedor-principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: $color-fondo;
+  border: solid 1px $color-tipografia-hover;
 }
 
 .titulo-pelicula {
-    margin: 0;
-    margin-left: 10px;
-    font-size: 20px;
+  margin: 0;
+  margin-left: 10px;
+  font-size: 20px;
 }
 
 .contenedor-info {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    .contenedor-imagen {
-        width: 40px;
-        height: 40px;
-        margin: 10px;
-        
-        img {
-            width: 100%;
-            height: 100%;
-        }
+  .contenedor-imagen {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
     }
-    
+  }
 }
 
-
 h4 {
-    margin: 5px;
+  margin: 5px;
 }
 
 .redondo {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-right: 10px;
-    @include centrado;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  @include centrado;
 }

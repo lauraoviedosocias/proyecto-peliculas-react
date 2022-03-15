@@ -22,7 +22,7 @@ const DetallePelicula = () => {
 
   return (
     <div
-      className="contenedor-principal"
+      className="contenedor-principal-detalle"
       style={{
         backgroundImage:
           "url(" +

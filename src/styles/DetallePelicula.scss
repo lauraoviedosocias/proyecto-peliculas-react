@@ -13,7 +13,7 @@ $color-tipografia-hover: #b2b5b8;
   justify-content: center;
 }
 
-.contenedor-principal {
+.contenedor-principal-detalle {
   height: 100vh;
   width: 100vw;
   background-position: center;
@@ -40,6 +40,10 @@ $color-tipografia-hover: #b2b5b8;
     background-color: hsla(0, 0%, 0%, 0);
     color: $color-tipografia;
 
+    p, li {
+      font-size: 20px;
+    }
+
     .titulo {
       display: flex;
       @include centrado;
@@ -54,7 +58,7 @@ $color-tipografia-hover: #b2b5b8;
 
 .fondo-opaco {
     position: absolute;
-    top: 60px;
+    top: 86px;
     left: 0;
     height: 100vh;
     width: 100%;
