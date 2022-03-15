@@ -2,6 +2,7 @@ import Tarjeta from "./Tarjeta";
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "../styles/Populares.scss"
 
 const Populares = () => {
   const [populares, setPopulares] = useState([]);
@@ -22,10 +23,11 @@ const Populares = () => {
       <Row>
         {populares.map((elemento) => (
           <Col key={elemento.id}>
-            <Link to={`/peliculas/${elemento.id}`}>
-              <Tarjeta imagen={elemento.poster_path} titulo={elemento.title} />
-            </Link>
-          </Col>
+
+          <Link to={`/peliculas/${elemento.id}`}>
+            <Tarjeta imagen={elemento.poster_path} titulo={elemento.title} />
+          </Link>
+        </Col>
         ))}
       </Row>
     </Container>

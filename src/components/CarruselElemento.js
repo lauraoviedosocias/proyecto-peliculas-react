@@ -1,6 +1,7 @@
 import { Carousel } from "react-bootstrap";
 import "../styles/CarruselElemento.scss";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const CarruselElemento = () => {
   const [elementosCarrusel, setElementosCarrusel] = useState([]);
@@ -19,6 +20,7 @@ const CarruselElemento = () => {
     <Carousel fade>
       {elementosCarrusel.map((elemento) => (
         <Carousel.Item
+          key={elemento.id}
           className="contenedor-carrusel"
           style={{
             backgroundImage:
@@ -27,12 +29,16 @@ const CarruselElemento = () => {
               elemento.backdrop_path +
               ")",
           }}
-          alt={elemento.title}
+          alt={`Poster de ${elemento.title}`}
         >
-          <Carousel.Caption>
-            <h3>{elemento.title}</h3>
-            <p>{elemento.overview}</p>
-          </Carousel.Caption>
+          <Link to={`/peliculas/${elemento.id}`}>
+            <Carousel.Caption>
+              <div className="fondo-caption">
+                <h3>{elemento.title}</h3>
+                <p>{elemento.overview}</p>
+              </div>
+            </Carousel.Caption>
+          </Link>
         </Carousel.Item>
       ))}
     </Carousel>

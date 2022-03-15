@@ -19,10 +19,8 @@ const App = () => {
         <Route path="/" element={<Home/>}/>
         <Route path="lanzamientos" element={<Lanzamientos/>}/>
         <Route path="/populares" element={<Populares/>}/>
-        <Route path="/busqueda" element={<Busqueda/>}/>
-        
+        <Route path="/busqueda" element={<Busqueda/>}/>        
         <Route path="/busqueda:valorBusqueda" element={<Busqueda/>}/>
-
         <Route path="/peliculas/:id" element={<DetallePelicula/>}/>
         <Route path="*" element={<ErrorNoEncontrado/>}/>
       </Routes>

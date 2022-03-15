@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 const DetallePelicula = () => {
   const params = useParams();
   const [pelicula, setPelicula] = useState([]);
+
   const [generos, setGeneros] = useState([])
 
   useEffect(() => {
@@ -14,10 +15,33 @@ const DetallePelicula = () => {
       .then((res) => res.json())
       .then((data) => {
         setPelicula(data);
+
         setGeneros(data.genres)
+
       });
   }, []);
 
+  return (
+    <div>
+      <h1>{pelicula.title}</h1>
+      <Container style={{ backgroundColor: "pink" }}>
+        <Row className="justify-content-md-center">
+          <Col xs lg="2">
+            1 of 3
+          </Col>
+          <Col md="auto">Variable width content</Col>
+          <Col xs lg="2">
+            3 of 3
+          </Col>
+        </Row>
+        <Row>
+          <Col>1 of 3</Col>
+          <Col md="auto">Variable width content</Col>
+        </Row>
+      </Container>
+    </div>
+  );
+};
 
 
   return (
