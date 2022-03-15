@@ -1,7 +1,6 @@
-
+import "../styles/DetallePelicula.scss"
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
 
 const DetallePelicula = () => {
 
@@ -18,25 +17,27 @@ const DetallePelicula = () => {
     }, [])
 
     return (
-        <div>
-            <h1>{pelicula.title}</h1>
-            <Container style={{ backgroundColor: 'pink' }}>
-                <Row className="justify-content-md-center">
-                    <Col xs lg="2">
-                        1 of 3
-                    </Col>
-                    <Col md="auto">Variable width content</Col>
-                    <Col xs lg="2">
-                        3 of 3
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>1 of 3</Col>
-                    <Col md="auto">Variable width content</Col>
-                </Row>
-            </Container>
+      <div
+        className="contenedor-principal">
+          
+        <div className="tarjeta-imagen">
+          <img src={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`} />
         </div>
-    )
+
+        <div className="tarjeta-informacion">
+          <div className="titulo">
+            <h2>{pelicula.title}</h2>
+            <button type="button">Ver trailer</button>
+          </div>
+          <div className="detalles">
+            <h4>Resumen</h4>
+            <p>{pelicula.overview}</p>
+            <h4>Géneros</h4>
+            <li>Acción</li>
+          </div>
+        </div>
+      </div>
+    );
 }
 
 export default DetallePelicula;
