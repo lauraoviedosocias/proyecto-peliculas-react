@@ -1,7 +1,9 @@
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import "../logo.svg"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import popcorn from "../img/popcorn.png"
+import { Link } from "react-router-dom";
+import "../styles/NavBar.scss"
 
 
 
@@ -12,17 +14,18 @@ const NavBar = () => {
                         <img
                             alt=""
                             src={popcorn}
+                            padding="10px"
                             width="60"
                             height="60"
                             className="d-inline-block align-top"
                         />{' '}
                     
                     </Navbar.Brand>
-                    <Nav className="me-auto" style={{ height: '60px' }}>
-                        <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="lanzamientos">Últimos lanzamientos</Nav.Link>
-                        <Nav.Link href="populares">Populares</Nav.Link>
-                        <Nav.Link href="busqueda">Búsqueda</Nav.Link>
+                    <Nav className="navbar me-auto" style={{ height: '60px' }}>
+                        <Nav.Link><Link className="link" to="/">Home</Link></Nav.Link>
+                        <Nav.Link><Link to="/lanzamientos">Últimos lanzamientos</Link></Nav.Link>
+                        <Nav.Link><Link to="/populares">Populares</Link></Nav.Link>
+                        <Nav.Link><Link to="/busqueda">Búsqueda</Link></Nav.Link>
                     </Nav>
             </Navbar>
     )

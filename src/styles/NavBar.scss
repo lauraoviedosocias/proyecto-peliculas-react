@@ -1,0 +1,17 @@
+$color-tipografia: #e9ecef;
+$color-tipografia-hover: #b2b5b8;
+
+.navbar {
+
+    padding-left: 30px;
+    
+  a {
+    text-decoration: none;
+    color: $color-tipografia;
+    font-size: 20px;
+    &:hover {
+        color: $color-tipografia-hover;
+    }
+    
+  }
+}
