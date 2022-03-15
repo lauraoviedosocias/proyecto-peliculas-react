@@ -1,4 +1,64 @@
+$color-tipografia: #e9ecef;
+$color-tipografia-hover: #b2b5b8;
 
+@mixin centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.contenedor-principal {
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include centrado;
+
+  .tarjeta-imagen {
+      position: relative;
+    height: 600px;
+    width: 400px;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .tarjeta-informacion {
+    position: relative;
+    height: 600px;
+    width: 700px;
+    margin-left: 50px;
+    background-color: hsla(0, 0%, 0%, 0);
+    color: $color-tipografia;
+
+    .titulo {
+      display: flex;
+      @include centrado;
+      justify-content: space-between;
+    }
+
+    .detalles {
+      padding-top: 30px;
+    }
+  }
+}
+
+.fondo-opaco {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    opacity: .6;
+}
 
