@@ -64,7 +64,7 @@ const Busqueda = () => {
       </form>
       <Row>
         {busqueda.map((elemento) => (
-          <Col key={elemento.id}>
+          <Col className="justify-content" key={elemento.id}>
           <Link to={`/peliculas/${elemento.id}`}>
             <Tarjeta                  
               imagen={elemento.poster_path}

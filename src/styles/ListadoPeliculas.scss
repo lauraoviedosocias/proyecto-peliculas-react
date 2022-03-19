@@ -2,12 +2,17 @@ $color-secundario: #212529;
 $color-fondo: #fff;
 $color-tipografia: #e9ecef;
 $color-tipografia-hover: #b2b5b8;
+$layout-breakpoint-small: 960px;
+
 
 .contenedor-principal-lista {
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-basis: 600px;
+	  flex-grow: 0;
+	  flex-shrink: 0.5;
     
 
     margin: 25px;
@@ -29,7 +34,6 @@ $color-tipografia-hover: #b2b5b8;
     display: flex;
     flex-direction: column;
     background-color: $color-fondo;
-    width: 720px;
     height: 800px;
     padding: 10px;
     border: 3px solid $color-secundario;
@@ -47,3 +51,10 @@ $color-tipografia-hover: #b2b5b8;
   }
 }
 
+
+@media (max-width: $layout-breakpoint-small) {
+    .contenedor-principal-lista {
+      min-width: 600px;
+
+    }
+  }

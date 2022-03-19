@@ -23,7 +23,7 @@ const Populares = () => {
       <h2 className="p-3">Conocé cuáles son las películas más populares</h2>
       <Row>
         {populares.map((elemento) => (
-          <Col key={elemento.id}>
+          <Col className="justify-content" key={elemento.id}>
           <Link to={`/peliculas/${elemento.id}`}>
             <Tarjeta imagen={elemento.poster_path} titulo={elemento.title} />
           </Link>
