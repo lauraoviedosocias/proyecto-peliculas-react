@@ -22,7 +22,7 @@ const Lanzamientos = () => {
       <h2 className="p-3">Conocé cuáles son los estrenos más recientes</h2>
       <Row>
         {ultimosLanzamientos.map((elemento) => (
-          <Col key={elemento.id}>
+          <Col className="justify-content" key={elemento.id}>
             <Link to={`/peliculas/${elemento.id}`}>
               <Tarjeta
                 imagen={elemento.poster_path}

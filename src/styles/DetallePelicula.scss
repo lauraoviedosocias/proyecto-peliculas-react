@@ -1,5 +1,6 @@
 $color-tipografia: #e9ecef;
 $color-tipografia-hover: #b2b5b8;
+$layout-breakpoint-small: 960px;
 
 @mixin centrado {
   display: flex;
@@ -23,7 +24,7 @@ $color-tipografia-hover: #b2b5b8;
   @include centrado;
 
   .tarjeta-imagen {
-      position: relative;
+    position: relative;
     height: 600px;
     width: 400px;
     img {
@@ -36,11 +37,12 @@ $color-tipografia-hover: #b2b5b8;
     position: relative;
     height: 600px;
     width: 700px;
-    margin-left: 50px;
+    margin: 20px;
     background-color: hsla(0, 0%, 0%, 0);
     color: $color-tipografia;
 
-    p, li {
+    p,
+    li {
       font-size: 20px;
     }
 
@@ -57,12 +59,25 @@ $color-tipografia-hover: #b2b5b8;
 }
 
 .fondo-opaco {
-    position: absolute;
-    top: 86px;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background-color: black;
-    opacity: .6;
+  position: absolute;
+  top: 96px;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  opacity: 0.6;
 }
 
+@media (max-width: $layout-breakpoint-small) {
+  .contenedor-principal-detalle {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    padding-top: 25px;
+  }
+
+  .fondo-opaco {
+    height: 135%;
+    padding-top: 25px;
+  }
+}
