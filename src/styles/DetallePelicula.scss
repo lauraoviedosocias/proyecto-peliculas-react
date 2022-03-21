@@ -1,6 +1,7 @@
 $color-tipografia: #e9ecef;
 $color-tipografia-hover: #b2b5b8;
 $layout-breakpoint-small: 960px;
+$layout-breakpoint-extra-small: 400px;
 
 @mixin centrado {
   display: flex;
@@ -16,7 +17,6 @@ $layout-breakpoint-small: 960px;
 
 .contenedor-principal-detalle {
   height: 100vh;
-  width: 100vw;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -35,11 +35,10 @@ $layout-breakpoint-small: 960px;
 
   .tarjeta-informacion {
     position: relative;
-    height: 600px;
     width: 700px;
-    margin: 20px;
     background-color: hsla(0, 0%, 0%, 0);
     color: $color-tipografia;
+    padding: 20px;
 
     p,
     li {
@@ -50,10 +49,6 @@ $layout-breakpoint-small: 960px;
       display: flex;
       @include centrado;
       justify-content: space-between;
-    }
-
-    .detalles {
-      padding-top: 30px;
     }
   }
 }
@@ -72,12 +67,19 @@ $layout-breakpoint-small: 960px;
   .contenedor-principal-detalle {
     flex-wrap: wrap;
     justify-content: center;
-    height: 100%;
     padding-top: 25px;
+
+    .detalles {
+      h4,
+      p,
+      li {
+        font-size: 15px;
+      }
+    }
   }
 
   .fondo-opaco {
-    height: 135%;
+    height: 100%;
     padding-top: 25px;
   }
 }

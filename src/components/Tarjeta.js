@@ -1,6 +1,6 @@
 import { Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/Tarjeta.scss"
+import "../styles/Tarjeta.scss";
 
 const Tarjeta = ({ titulo, imagen }) => {
   return (

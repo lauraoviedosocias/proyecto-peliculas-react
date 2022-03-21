@@ -4,18 +4,15 @@ $color-tipografia: #e9ecef;
 $color-tipografia-hover: #b2b5b8;
 $layout-breakpoint-small: 960px;
 
-
 .contenedor-principal-lista {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 600px;
+  flex-grow: 0;
+  flex-shrink: 0.5;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-basis: 600px;
-	  flex-grow: 0;
-	  flex-shrink: 0.5;
-    
-
-    margin: 25px;
+  margin: 25px;
 
   .encabezado {
     background-color: $color-secundario;
@@ -44,17 +41,14 @@ $layout-breakpoint-small: 960px;
       color: $color-secundario;
       font-size: 20px;
       &:hover {
-          color: $color-tipografia-hover;
+        color: $color-tipografia-hover;
       }
-      
     }
   }
 }
 
-
 @media (max-width: $layout-breakpoint-small) {
-    .contenedor-principal-lista {
-      min-width: 600px;
-
-    }
+  .contenedor-principal-lista {
+    min-width: 600px;
   }
+}

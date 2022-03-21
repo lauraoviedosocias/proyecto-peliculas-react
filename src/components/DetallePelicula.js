@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 const DetallePelicula = () => {
   const params = useParams();
   const [pelicula, setPelicula] = useState([]);
-  const [generos, setGeneros] = useState([])
+  const [generos, setGeneros] = useState([]);
 
   useEffect(() => {
     fetch(
@@ -14,11 +14,9 @@ const DetallePelicula = () => {
       .then((res) => res.json())
       .then((data) => {
         setPelicula(data);
-        setGeneros(data.genres)
+        setGeneros(data.genres);
       });
   }, []);
-
-
 
   return (
     <div
@@ -49,7 +47,7 @@ const DetallePelicula = () => {
           <p>{pelicula.overview}</p>
           <h4>Géneros</h4>
           <ul>
-            {generos.map((genero)=>(
+            {generos.map((genero) => (
               <li key={genero.id}>{genero.name}</li>
             ))}
           </ul>

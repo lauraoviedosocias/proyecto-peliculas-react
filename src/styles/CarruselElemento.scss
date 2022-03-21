@@ -1,19 +1,19 @@
 $color-tipografia-hover: #b2b5b8;
 $color-secundario: #212529;
+
 .contenedor-carrusel {
-    height: 700px;
-    background-size: cover;
-    background-position: center top;
+  height: 700px;
+  background-size: cover;
+  background-position: center top;
 
-    .fondo-caption {
-        background-color: $color-tipografia-hover;
-        opacity: 0.7;
-        padding: 10px;
+  .fondo-caption {
+    background-color: $color-tipografia-hover;
+    opacity: 0.7;
+    padding: 10px;
 
-        h3, p {
-            color: $color-secundario;
-        }
+    h3,
+    p {
+      color: $color-secundario;
     }
+  }
 }
-
-

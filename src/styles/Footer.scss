@@ -4,13 +4,13 @@ $color-tipografia: #e9ecef;
 $color-tipografia-hover: #b2b5b8;
 
 .contenedor-footer {
-    height: 130px;
-    background-color: $color-secundario;
-    display: flex;
-    justify-content: center;
-    padding-top:20px;
+  height: 130px;
+  background-color: $color-secundario;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
 
-    h4 {
-        color: $color-tipografia;
-    }
+  h4 {
+    color: $color-tipografia;
+  }
 }

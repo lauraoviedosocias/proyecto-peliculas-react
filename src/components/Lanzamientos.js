@@ -2,7 +2,7 @@ import Tarjeta from "./Tarjeta";
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "../styles/Lanzamientos.scss"
+import "../styles/Lanzamientos.scss";
 
 const Lanzamientos = () => {
   const [ultimosLanzamientos, setUltimosLanzamientos] = useState([]);
@@ -24,10 +24,7 @@ const Lanzamientos = () => {
         {ultimosLanzamientos.map((elemento) => (
           <Col className="justify-content" key={elemento.id}>
             <Link to={`/peliculas/${elemento.id}`}>
-              <Tarjeta
-                imagen={elemento.poster_path}
-                titulo={elemento.title}
-              />
+              <Tarjeta imagen={elemento.poster_path} titulo={elemento.title} />
             </Link>
           </Col>
         ))}

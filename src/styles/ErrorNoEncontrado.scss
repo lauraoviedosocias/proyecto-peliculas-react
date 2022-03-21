@@ -1,24 +1,23 @@
 $color-tipografia-hover: #b2b5b8;
 
 .contenedor-error {
-    
-    padding: 25px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+
+  .error {
+    width: 600px;
+    height: 700px;
+    background-image: url(../img/gandalf.png);
+    background-size: cover;
+    background-position: center top;
     display: flex;
-    justify-content: center;
+    align-items: center;
+  }
 
-    .error {
-        width: 600px;
-        height: 700px;
-        background-image: url(../img/gandalf.png);
-        background-size: cover;
-        background-position: center top;
-        display: flex;
-        align-items: center;
-    }
-
-    .aviso-error {
-        color: $color-tipografia-hover;
-        font-size: 30px;
-        padding-left: 10px;
-    }
+  .aviso-error {
+    color: $color-tipografia-hover;
+    font-size: 30px;
+    padding-left: 10px;
+  }
 }

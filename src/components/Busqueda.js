@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import Tarjeta from "./Tarjeta";
 import { Col, Row } from "react-bootstrap";
-import "../styles/Busqueda.scss"
-
+import "../styles/Busqueda.scss";
 
 const Busqueda = () => {
   const [busqueda, setBusqueda] = useState([]);
@@ -65,13 +64,10 @@ const Busqueda = () => {
       <Row>
         {busqueda.map((elemento) => (
           <Col className="justify-content" key={elemento.id}>
-          <Link to={`/peliculas/${elemento.id}`}>
-            <Tarjeta                  
-              imagen={elemento.poster_path}
-              titulo={elemento.title}
-            />
-          </Link>
-        </Col>
+            <Link to={`/peliculas/${elemento.id}`}>
+              <Tarjeta imagen={elemento.poster_path} titulo={elemento.title} />
+            </Link>
+          </Col>
         ))}
       </Row>
     </div>
