@@ -1,3 +1,28 @@
+# Movies App
+
+Realicé una web app de películas, utilizando la API (https://www.themoviedb.org/)
+
+Podes visitar la web en 
+
+## Las tecnologias utilizadas fueron :
+
+- Html
+- SASS
+- React
+- API
+- GIT
+- GitHub
+
+## ¿Que podés hacer en esta web?
+
+- En el Home, se puede ver una carrusel que contiene las películas que serán lanzadas próximamente y a dos listas con los últimos lanzamientos y las más populares.
+- A su vez se puede acceder a ver las películas que han sido lanzadas recientemente y aquellas que están puntuadas como las más populares desde la barra de navegación.
+- Ver más detalles de cada película al hacer clic en las tarjetas.
+- Realizar una búsqueda por nombre de película en la sección búsqueda.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
