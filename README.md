@@ -8,6 +8,7 @@ Podes visitar la web en
 
 - Html
 - SASS
+- React Bootstrap
 - React
 - API
 - GIT
