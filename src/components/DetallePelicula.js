@@ -16,7 +16,7 @@ const DetallePelicula = () => {
         setPelicula(data);
         setGeneros(data.genres);
       });
-  }, []);
+  }, [params.id]);
 
   return (
     <div
@@ -33,6 +33,7 @@ const DetallePelicula = () => {
       <div className="fondo-opaco"></div>
       <div className="tarjeta-imagen">
         <img
+          alt={pelicula.name}
           src={`https://image.tmdb.org/t/p/original/${pelicula.poster_path}`}
         />
       </div>

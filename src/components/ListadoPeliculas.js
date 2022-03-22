@@ -12,7 +12,7 @@ const ListadoPeliculas = ({ categoria, tituloCategoria }) => {
     )
       .then((res) => res.json())
       .then((data) => setPeliculas(data.results));
-  }, []);
+  }, [categoria]);
 
   return (
     <div className="contenedor-principal-lista">
