@@ -1,4 +1,5 @@
 import { Navbar, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "../logo.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import popcorn from "../img/popcorn.png";
@@ -20,10 +21,10 @@ const NavBar = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="/lanzamientos">Últimos Lanzamientos</Nav.Link>
-          <Nav.Link href="/populares">Populares</Nav.Link>
-          <Nav.Link href="/busqueda">Búsqueda</Nav.Link>
+          <Link to="/">Home</Link>
+          <Link to="/lanzamientos">Últimos Lanzamientos</Link>
+          <Link to="/populares">Populares</Link>
+          <Link to="/busqueda">Búsqueda</Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
