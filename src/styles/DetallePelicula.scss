@@ -1,7 +1,7 @@
 $color-tipografia: #e9ecef;
 $color-tipografia-hover: #b2b5b8;
 $layout-breakpoint-small: 960px;
-$layout-breakpoint-extra-small: 400px;
+$layout-breakpoint-extra-small: 660px;
 
 @mixin centrado {
   display: flex;
@@ -81,5 +81,15 @@ $layout-breakpoint-extra-small: 400px;
   .fondo-opaco {
     height: 100%;
     padding-top: 25px;
+  }
+}
+
+@media (max-width: $layout-breakpoint-extra-small) {
+  .contenedor-principal-detalle {
+    height: 100%;
+  }
+
+  .fondo-opaco {
+    display: none;
   }
 }

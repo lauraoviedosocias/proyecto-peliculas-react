@@ -3,6 +3,7 @@ $color-fondo: #fff;
 $color-tipografia: #e9ecef;
 $color-tipografia-hover: #b2b5b8;
 $layout-breakpoint-small: 960px;
+$layout-breakpoint-extra-small: 660px;
 
 .contenedor-principal-lista {
   display: flex;
@@ -52,3 +53,10 @@ $layout-breakpoint-small: 960px;
     min-width: 600px;
   }
 }
+
+@media (max-width: $layout-breakpoint-extra-small) {
+  .contenedor-principal-lista {
+    min-width: 300px;
+  }
+}
+
