@@ -9,6 +9,7 @@ const Busqueda = () => {
   const [searchParams, setSearchParams] = useSearchParams({
     query: "marvel",
   });
+  
   const [valorBusqueda, setValorBusqueda] = useState("");
 
   const handleChange = (e) => {
