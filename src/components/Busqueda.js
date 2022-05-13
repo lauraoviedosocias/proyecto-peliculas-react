@@ -37,6 +37,7 @@ const Busqueda = () => {
       .then((data) => {
         setBusqueda(data.results);
       });
+      // searchParams tambien deberia estar en el array de dependencias
   }, [valorBusqueda]);
 
   return (
@@ -48,6 +49,7 @@ const Busqueda = () => {
             type="text"
             className="form-control"
             placeholder="Nombre de la película"
+            // bien por el aria label!
             aria-label="Nombre de la película"
             aria-describedby="button-addon2"
             onChange={handleChange}

@@ -44,6 +44,8 @@ const DetallePelicula = () => {
           <button type="button">Ver trailer</button>
         </div>
         <div className="detalles">
+          {/* Si la api no nos trae resumen o generos estos titulos se ven vacios, sin nada abajo. 
+          Deberiamos tener algun texto tipo "Sin resumen" en caso de que no exista overview, mismo con los generos.  */}
           <h4>Resumen</h4>
           <p>{pelicula.overview}</p>
           <h4>Géneros</h4>

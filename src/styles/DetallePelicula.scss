@@ -3,6 +3,7 @@ $color-tipografia-hover: #b2b5b8;
 $layout-breakpoint-small: 960px;
 $layout-breakpoint-extra-small: 660px;
 
+// los mixin deberian ir en un archivo aparte, igual que las funciones
 @mixin centrado {
   display: flex;
   justify-content: center;
