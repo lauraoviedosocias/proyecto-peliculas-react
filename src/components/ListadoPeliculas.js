@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const ListadoPeliculas = ({ categoria, tituloCategoria }) => {
   const [peliculas, setPeliculas] = useState([]);
 
+  // excelente como resolviste este componente para reutilizarlo
   useEffect(() => {
     fetch(
       `https://api.themoviedb.org/3/movie/${categoria}?api_key=92b7c9e2808de339886a0b75ca3aa28e&language=es-AR&page=1`
