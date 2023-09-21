@@ -2,7 +2,7 @@
 
 Realicé una web app de películas, utilizando la API (https://www.themoviedb.org/)
 
-Podes visitar la web en 
+Podes visitar la web en https://deploy-preview-13--movies-react-app-laura.netlify.app/
 
 ## Las tecnologias utilizadas fueron :
 
